@@ -13,7 +13,7 @@ import {
 import Link from 'next/link';
 import { useTheme } from '@/components/ThemeProvider';
 import { Dock, DockIcon, DockItem, DockLabel } from '@/components/dock'
-import useMediaQuery from '@/hooks/useMediaQuery';
+// import useMediaQuery from '@/hooks/useMediaQuery';
 
 // Home section
 const homeItems = [
@@ -55,7 +55,7 @@ const socialItems = [
 
 export function Control() {
   const { theme, toggleTheme } = useTheme();
-  const isSmallScreen = useMediaQuery('(max-width: 640px)');
+  // const isSmallScreen = useMediaQuery('(max-width: 640px)');
 
   return (
     <div className='fixed bottom-4 left-1/2 -translate-x-1/2 w-auto max-w-full z-40'>

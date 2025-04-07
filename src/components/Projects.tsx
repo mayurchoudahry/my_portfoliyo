@@ -31,7 +31,7 @@ interface ProjectData {
 
 // Reusable Tag Component
 const TechTag: React.FC<TechTagProps> = ({ name }) => (
-  <span className="inline-flex items-center rounded-md font-semibold transition-colors bg-black/10 text-black hover:bg-black/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/5 px-2.5 py-0.5 text-[0.8rem]">
+  <span className="inline-flex items-center rounded-md font-semibold transition-colors bg-black/10 text-black lg:hover:bg-black/20 dark:bg-white/10 dark:text-white lg:dark:hover:bg-white/5 px-2.5 py-0.5 text-[0.8rem]">
     {name}
   </span>
 );
@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="relative h-54 w-full overflow-hidden">
       {videoSrc ? (
         <video
-          className="w-full h-full object-contain scale-106 group-hover:scale-108 transition-transform duration-300"
+          className="w-full h-full object-cover scale-105 group-hover:scale-108 transition-transform duration-300"
           autoPlay
           muted
           loop
@@ -155,9 +155,9 @@ const Projects: React.FC = () => {
         <div className="inline-block rounded-lg bg-black text-white dark:bg-white dark:text-black px-3 py-1 text-sm transition-colors duration-300 ">My Projects</div>
 
         <div className="mb-2">
-          <AnimatedVariableText text="Stuff I’ve built ⚒️" className="text-4xl sm:text-5xl" />
+          <AnimatedVariableText text="Stuff I’ve built ⚒️" className="font-bold sm:font-normal text-4xl sm:text-5xl" />
         </div>
-        <p className="text-lg text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto transition-colors duration-300">
+        <p className="text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto transition-colors duration-300">
           I&#39;ve worked on a variety of projects, from simple websites to complex web applications.
           <br />
           Here are a few of my favorites.

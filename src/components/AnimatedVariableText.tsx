@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, MutableRefObject } from 'react';
 import { motion } from "framer-motion";
 import VariableProximity from '@/components/ui/textEffect';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 interface AnimatedVariableTextProps {
   text: string;
@@ -15,9 +16,9 @@ export default function AnimatedVariableText({
   className = "", 
   once = true 
 }: AnimatedVariableTextProps) {
-  const containerRef = useRef(null);
-  
-  // Variants for Container
+  const containerRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement | null>;
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)'); // lg breakpoint
+
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -26,7 +27,6 @@ export default function AnimatedVariableText({
     }),
   };
 
-  // Variants for each word
   const child = {
     visible: {
       opacity: 1,
@@ -48,7 +48,6 @@ export default function AnimatedVariableText({
     },
   };
 
-  // Determine if the text is centered, left-aligned, or right-aligned based on the className
   const isLeft = className.includes('text-left');
   const isRight = className.includes('text-right');
   const justifyClass = isLeft ? 'justify-start' : isRight ? 'justify-end' : 'justify-center';
@@ -75,13 +74,13 @@ export default function AnimatedVariableText({
             label={word}
             className="variable-proximity-demo"
             fromFontVariationSettings="'wght' 400, 'opsz' 9"
-            toFontVariationSettings="'wght' 1000, 'opsz' 40"
+            toFontVariationSettings={isLargeScreen ? "'wght' 1000, 'opsz' 40" : "'wght' 400, 'opsz' 9"}
             containerRef={containerRef}
-            radius={200}
+            radius={isLargeScreen ? 200 : 0}
             falloff='linear'
           />
         </motion.div>
       ))}
     </motion.div>
   );
-} 
+}

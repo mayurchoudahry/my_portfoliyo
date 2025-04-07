@@ -74,7 +74,7 @@ export default function ExperienceSection() {
               >
                 <div>
                   <div className="flex items-center">
-                    <h3 className="font-bold text-lg">{exp.title}</h3>
+                    <h3 className="font-bold text-sm sm:text-lg ">{exp.title}</h3>
                     <motion.div
                       className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity"
                       animate={{ rotate: isOpen ? 180 : 0 }}
@@ -82,10 +82,10 @@ export default function ExperienceSection() {
                       <ChevronDown className="h-5 w-5 text-neutral-600 dark:text-neutral-400" />
                     </motion.div>
                   </div>
-                  <p className="text-neutral-600 dark:text-neutral-400">{exp.role}</p>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">{exp.role}</p>
                 </div>
 
-                <p className="text-neutral-500 dark:text-neutral-400 text-sm font-medium">
+                <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm font-medium mt-1 sm:mt-0">
                   {exp.duration}
                 </p>
               </div>

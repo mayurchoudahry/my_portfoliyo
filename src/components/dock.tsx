@@ -21,11 +21,21 @@ import {
   ReactElement,
 } from 'react';
 import { cn } from '@/lib/utils';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 const DOCK_HEIGHT = 128;
 const DEFAULT_MAGNIFICATION = 80;
 const DEFAULT_DISTANCE = 150;
 const DEFAULT_PANEL_HEIGHT = 64;
+
+// Responsive defaults
+const SM_MAGNIFICATION = 60;
+const SM_DISTANCE = 100;
+const SM_PANEL_HEIGHT = 50;
+
+const XS_MAGNIFICATION = 48;
+const XS_DISTANCE = 80;
+const XS_PANEL_HEIGHT = 40;
 
 export type DockProps = {
   children: React.ReactNode;
@@ -89,6 +99,35 @@ function Dock({
   distance = DEFAULT_DISTANCE,
   panelHeight = DEFAULT_PANEL_HEIGHT,
 }: DockProps) {
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)');
+  const isMediumScreen = useMediaQuery('(min-width: 768px)');
+  const isSmallScreen = useMediaQuery('(min-width: 640px)');
+  
+  // Determine the appropriate values based on screen size
+  const responsiveMagnification = isLargeScreen 
+    ? magnification 
+    : isMediumScreen 
+      ? SM_MAGNIFICATION 
+      : isSmallScreen 
+        ? SM_MAGNIFICATION
+        : XS_MAGNIFICATION;
+        
+  const responsiveDistance = isLargeScreen 
+    ? distance 
+    : isMediumScreen 
+      ? SM_DISTANCE 
+      : isSmallScreen 
+        ? SM_DISTANCE
+        : XS_DISTANCE;
+        
+  const responsivePanelHeight = isLargeScreen 
+    ? panelHeight 
+    : isMediumScreen 
+      ? SM_PANEL_HEIGHT 
+      : isSmallScreen 
+        ? SM_PANEL_HEIGHT
+        : XS_PANEL_HEIGHT;
+
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
 
@@ -117,14 +156,19 @@ function Dock({
           mouseX.set(Infinity);
         }}
         className={cn(
-          'mx-auto flex w-fit gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900',
+          'mx-auto flex w-fit gap-2 sm:gap-3 md:gap-4 rounded-2xl bg-gray-50 px-2 sm:px-3 md:px-4 dark:bg-neutral-900',
           className
         )}
         style={{ height: panelHeight }}
         role='toolbar'
         aria-label='Application dock'
       >
-        <DockProvider value={{ mouseX, spring, distance, magnification }}>
+        <DockProvider value={{ 
+          mouseX, 
+          spring, 
+          distance: responsiveDistance, 
+          magnification: responsiveMagnification 
+        }}>
           {children}
         </DockProvider>
       </motion.div>

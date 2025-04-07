@@ -66,7 +66,7 @@ export const CardSpotlight = ({
               [59, 130, 246],
               [139, 92, 246],
             ]}
-            dotSize={2}
+            dotSize={1}
             showGradient={false}   // Conditionally show gradient based on theme
           />
         )}

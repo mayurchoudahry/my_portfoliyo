@@ -9,10 +9,9 @@ import AnimatedVariableText from "@/components/AnimatedVariableText";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col space-y-7 min-h-screen max-w-4xl mx-auto px-6 md:px-10 py-8">
-
+      <main className="flex flex-col space-y-7 min-h-screen max-w-4xl mx-auto px-6 md:px-10 py-4 sm:py-8">
         {/* Hero Section */}
-        <div className="flex flex-col ">
+        <div className="flex flex-col  sm:items-start">
           <div className="relative w-full h-50 pb-4">
 
             <Image
@@ -28,20 +27,23 @@ export default function Home() {
               asciiFontSize={4}
             />
           </div>
-          <div className="flex flex-col -mt-25 items-start">
-            <div className="rounded-full overflow-hidden border-4 ml-5 border-white dark:border-black z-10 w-[168px] h-[168px]">
-              <Image
-                src="/avatar.png"
-                alt="Vipul"
-                width={168}
-                height={168}
-                className="object-cover w-full h-full"
-              />
+          <div className="flex flex-col -mt-15 sm:items-start">
+            <div className="flex items-center justify-center">
+              <div className="items-center rounded-full overflow-hidden border-4 ml-5 border-white dark:border-black z-10 w-[168px] h-[168px]">
+                <Image
+                  src="/avatar.png"
+                  alt="Vipul"
+                  width={168}
+                  height={168}
+                  className="object-cover w-full h-full "
+                />
+              </div>
+
             </div>
 
-            <div className="">
-              <AnimatedVariableText text="Hi, I'm Vipul!" className="text-4xl sm:text-5xl text-left" />
-              <AnimatedVariableText text="Nice to meet you" className="text-4xl sm:text-5xl text-left -mt-3" />
+            <div className="mt-2 sm:mt-0">
+              <AnimatedVariableText text="Hi, I'm Vipul!" className="text-4xl font-bold sm:font-normal sm:text-5xl text-left" />
+              <AnimatedVariableText text="Nice to meet you" className="text-4xl font-bold sm:font-normal sm:text-5xl text-left -mt-3" />
             </div>
           </div>
         </div>
@@ -69,7 +71,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg">Parul University</h3>
+              <h3 className="font-bold text-md sm:text-lg">Parul University</h3>
               <p className="text-neutral-600 dark:text-neutral-400">BTech in Computer Engineering</p>
               <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">2021 - 2025</p>
             </div>
@@ -102,7 +104,7 @@ export default function Home() {
               "Responsive Design",
               "UI/UX",
             ].map((skill) => (
-              <div key={skill} className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80">{skill}</div>
+              <div key={skill} className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow lg:hover:bg-primary/80">{skill}</div>
             ))}
           </div>
         </section>
@@ -112,11 +114,11 @@ export default function Home() {
 
         {/* Contact Section */}
         <section className="pb-10 mb-12">
-          <div className="relative z-10 max-w-3xl mx-auto text-center ">
+          <div className="relative z-10 w-full sm:max-w-4xl mx-auto text-center ">
             <div className="inline-block rounded-lg bg-black text-white dark:bg-white dark:text-black px-3 py-1 text-sm transition-colors duration-300 ">Contact</div>
             <div className="mb-8">
-              <AnimatedVariableText text="Let's Create Something" className="text-4xl sm:text-5xl" />
-              <AnimatedVariableText text="Cool Together" className="text-4xl sm:text-5xl -mt-3" />
+              <AnimatedVariableText text="Let's Build Something" className="font-bold sm:font-normal text-3xl sm:text-5xl" />
+              <AnimatedVariableText text="Cool Together" className="font-bold sm:font-normal text-3xl sm:text-5xl -mt-3" />
             </div>
             <div className="flex items-center justify-center space-x-3">
               <a
@@ -126,10 +128,10 @@ export default function Home() {
               >
                 <Modal>
                   <ModalTrigger className="bg-black text-white dark:bg-white dark:text-black flex justify-center group/modal-btn cursor-pointer">
-                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
-                    Let&#39;s Talk
+                    <span className="lg:group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
+                      Let&#39;s Talk
                     </span>
-                    <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                    <div className="-translate-x-40 lg:group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
                       🚀
                     </div>
                   </ModalTrigger>
@@ -142,10 +144,10 @@ export default function Home() {
               >
                 <Modal>
                   <ModalTrigger className="bg-black text-white dark:bg-white dark:text-black flex justify-center group/modal-btn cursor-pointer">
-                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
+                    <span className="lg:group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
                       Drop a Mail
                     </span>
-                    <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                    <div className="-translate-x-40 lg:group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
                       💌
                     </div>
                   </ModalTrigger>

@@ -7,10 +7,8 @@ import {
 //   Twitter,
   Linkedin,
 //   Instagram,
-  SunMoon,
   Sun,
   Moon,
-  Sparkles,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useTheme } from '@/components/ThemeProvider';

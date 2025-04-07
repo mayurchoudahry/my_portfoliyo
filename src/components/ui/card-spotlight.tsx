@@ -23,7 +23,7 @@ export const CardSpotlight = ({
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -33,8 +33,6 @@ export const CardSpotlight = ({
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
 
-  // Only show gradient in dark mode
-  const showGradient = theme === "dark";
 
   return (
     <div

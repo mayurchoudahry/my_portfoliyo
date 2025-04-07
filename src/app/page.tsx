@@ -52,8 +52,9 @@ export default function Home() {
         <section className="">
           <h2 className="text-2xl font-bold ">About</h2>
           <p className="text-neutral-700 dark:text-neutral-300">
-            <strong>I build stuff that makes people go, “Whoa, that’s cool.”</strong> When I’m not tweaking pixels or solving layout puzzles, you’ll probably find me obsessing over random ideas or automating something that didn’t need automation.
+            <strong>I build stuff that makes people go, “Whoa, that’s cool.”</strong> When I&#39;m not tweaking pixels or solving layout puzzles, you&#39;ll probably find me obsessing over random ideas or automating something that didn&#39;t need automation.
           </p>
+
         </section>
 
         {/* Work Experience Section */}
@@ -128,7 +129,7 @@ export default function Home() {
                 <Modal>
                   <ModalTrigger className="bg-black text-white dark:bg-white dark:text-black flex justify-center group/modal-btn cursor-pointer">
                     <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
-                      Let's Talk
+                    Let&#39;s Talk
                     </span>
                     <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
                       🚀
@@ -141,21 +142,21 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              <Modal>
-                <ModalTrigger className="bg-black text-white dark:bg-white dark:text-black flex justify-center group/modal-btn cursor-pointer">
-                  <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
-                    Drop a Mail
-                  </span>
-                  <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-                    💌
-                  </div>
-                </ModalTrigger>
-              </Modal>
-            </a>
+                <Modal>
+                  <ModalTrigger className="bg-black text-white dark:bg-white dark:text-black flex justify-center group/modal-btn cursor-pointer">
+                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 font-medium">
+                      Drop a Mail
+                    </span>
+                    <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                      💌
+                    </div>
+                  </ModalTrigger>
+                </Modal>
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </main >
+        </section>
+      </main >
     </>
   );
 }

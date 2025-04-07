@@ -3,7 +3,7 @@ import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import React, { MouseEvent as ReactMouseEvent, useState } from "react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { cn } from "@/lib/utils";
-import { useTheme } from '@/components/ThemeProvider';
+// import { useTheme } from '@/components/ThemeProvider';
 export const CardSpotlight = ({
   children,
   radius = 350,
@@ -13,7 +13,7 @@ export const CardSpotlight = ({
   radius?: number;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>) => {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
@@ -22,7 +22,7 @@ export const CardSpotlight = ({
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -33,7 +33,7 @@ export const CardSpotlight = ({
   const handleMouseLeave = () => setIsHovering(false);
 
   // Only show gradient in dark mode
-  const showGradient = theme === "dark";
+  // const showGradient = theme === "dark";
 
   return (
     <div

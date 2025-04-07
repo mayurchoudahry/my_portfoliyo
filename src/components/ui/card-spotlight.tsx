@@ -14,7 +14,6 @@ export const CardSpotlight = ({
   radius?: number;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>) => {
-  const { theme } = useTheme();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   

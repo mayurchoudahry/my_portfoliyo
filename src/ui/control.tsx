@@ -56,7 +56,7 @@ export function Control() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className='fixed bottom-4 left-1/2 -translate-x-1/2 w-auto max-w-full z-50 '>
+    <div className='fixed bottom-4 left-1/2 -translate-x-1/2 w-auto max-w-full z-40 '>
       <Dock className='items-end pb-3 border-2'>
         {/* Home Section */}
         {homeItems.map((item, idx) => (

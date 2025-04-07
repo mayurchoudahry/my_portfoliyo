@@ -1,5 +1,4 @@
 import Image from "next/image";
-import TransitionEffect from "@/components/TransitionEffect";
 import ASCIIText from '@/ui/ASCIIText';
 import image2 from "@/public/exp2.png";
 import ExperienceSection from "@/components/Experience";
@@ -10,7 +9,6 @@ import AnimatedVariableText from "@/components/AnimatedVariableText";
 export default function Home() {
   return (
     <>
-      <TransitionEffect />
       <main className="flex flex-col space-y-7 min-h-screen max-w-4xl mx-auto px-6 md:px-10 py-8">
 
         {/* Hero Section */}

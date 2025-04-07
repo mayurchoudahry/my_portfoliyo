@@ -4,11 +4,11 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Control } from "@/ui/control";
 import GlassHeader from "@/components/GlassHeader";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans bg-white dark:bg-black text-black dark:text-white antialiased`}>
+      <body className={`${inter.variable}  font-sans bg-white dark:bg-black text-black dark:text-white antialiased `}>
+        <TransitionEffect />
         <ThemeProvider>
           <GlassHeader />
           <div className="pt-14">

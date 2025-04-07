@@ -138,7 +138,7 @@ export default function GlassHeader() {
                     className="absolute w-8 h-8 rounded-full overflow-hidden border border-white/20 dark:border-gray-800/40"
                   >
                     <Image 
-                      src="/avatar.jpg" 
+                      src="/avatar.png" 
                       alt="Profile"
                       fill
                       className="object-cover"

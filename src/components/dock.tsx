@@ -31,11 +31,11 @@ const DEFAULT_PANEL_HEIGHT = 64;
 // Responsive defaults
 const SM_MAGNIFICATION = 60;
 const SM_DISTANCE = 100;
-const SM_PANEL_HEIGHT = 50;
+// const SM_PANEL_HEIGHT = 50;
 
 const XS_MAGNIFICATION = 48;
 const XS_DISTANCE = 80;
-const XS_PANEL_HEIGHT = 40;
+// const XS_PANEL_HEIGHT = 40;
 
 export type DockProps = {
   children: React.ReactNode;
@@ -120,13 +120,7 @@ function Dock({
         ? SM_DISTANCE
         : XS_DISTANCE;
         
-  const responsivePanelHeight = isLargeScreen 
-    ? panelHeight 
-    : isMediumScreen 
-      ? SM_PANEL_HEIGHT 
-      : isSmallScreen 
-        ? SM_PANEL_HEIGHT
-        : XS_PANEL_HEIGHT;
+
 
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);

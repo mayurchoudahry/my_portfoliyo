@@ -140,14 +140,16 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
         }
         void main() {
             vec2 st = fragCoord.xy;
-            ${center.includes("x")
-          ? "st.x -= abs(floor((mod(u_resolution.x, u_total_size) - u_dot_size) * 0.5));"
-          : ""
-        }
-            ${center.includes("y")
-          ? "st.y -= abs(floor((mod(u_resolution.y, u_total_size) - u_dot_size) * 0.5));"
-          : ""
-        }
+            ${
+              center.includes("x")
+                ? "st.x -= abs(floor((mod(u_resolution.x, u_total_size) - u_dot_size) * 0.5));"
+                : ""
+            }
+            ${
+              center.includes("y")
+                ? "st.y -= abs(floor((mod(u_resolution.y, u_total_size) - u_dot_size) * 0.5));"
+                : ""
+            }
       float opacity = step(0.0, st.x);
       opacity *= step(0.0, st.y);
 
@@ -190,7 +192,7 @@ const ShaderMaterial = ({
   uniforms: Uniforms;
 }) => {
   const { size } = useThree();
-  const ref = useRef<THREE.Mesh>(null);
+  const ref = useRef<THREE.Mesh>(null!);
   let lastFrameTime = 0;
 
   useFrame(({ clock }) => {
@@ -201,14 +203,13 @@ const ShaderMaterial = ({
     }
     lastFrameTime = timestamp;
 
-    const material = ref.current.material as THREE.ShaderMaterial;
+    const material: any = ref.current.material;
     const timeLocation = material.uniforms.u_time;
     timeLocation.value = timestamp;
   });
 
   const getUniforms = () => {
-    const preparedUniforms: { [key: string]: any } = {};
-
+    const preparedUniforms: any = {};
 
     for (const uniformName in uniforms) {
       const uniform: any = uniforms[uniformName];
@@ -228,9 +229,9 @@ const ShaderMaterial = ({
           break;
         case "uniform3fv":
           preparedUniforms[uniformName] = {
-            value: (uniform.value as number[][]).map((v) =>
+            value: uniform.value.map((v: number[]) =>
               new THREE.Vector3().fromArray(v)
-            ),            
+            ),
             type: "3fv",
           };
           break;
@@ -254,7 +255,6 @@ const ShaderMaterial = ({
   };
 
   // Shader material
-
   const material = useMemo(() => {
     const materialObject = new THREE.ShaderMaterial({
       vertexShader: `
@@ -280,11 +280,9 @@ const ShaderMaterial = ({
 
     return materialObject;
   }, [size.width, size.height, source]);
-  
-
 
   return (
-    <mesh ref={ref}>
+    <mesh ref={ref as any}>
       <planeGeometry args={[2, 2]} />
       <primitive object={material} attach="material" />
     </mesh>

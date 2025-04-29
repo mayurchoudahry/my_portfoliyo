@@ -119,15 +119,15 @@ const Projects: React.FC = () => {
       year: "2024",
       description: "A premium real estate website built for a luxury residential project in Udaipur. The site emphasizes smooth animations, responsive design, and a modern user interface to attract high-end buyers.",
       url: "https://www.skyvilleudaipur.com/",
-      videoSrc: "https://res.cloudinary.com/dg0kso6zc/video/upload/v1744045941/project1_wxgkml.mp4",
-      technologies: ["React.js", "Tailwind CSS",]
+      videoSrc: "https://res.cloudinary.com/dljiyumfx/video/upload/v1745903909/project1_xobuvd.mp4",
+      technologies: ["Next.js", "Tailwind CSS","SEO Optimization"]
     },
     {
       title: "Golden Beam Pockets",
       year: "2024",
       description: "A conversion-focused landing page optimized for SEO and performance. Currently in the process of migration to Next.js to leverage Server-Side Rendering (SSR) and Static Site Generation (SSG).",
       url: "https://goldenbeampockets.com/",
-      videoSrc: "https://res.cloudinary.com/dg0kso6zc/video/upload/v1744045968/project2_sk9kry.mp4",
+      videoSrc: "https://res.cloudinary.com/dljiyumfx/video/upload/v1745904095/Untitled_video_-_Made_with_Clipchamp_iid45f.mp4",
       technologies: ["Next.js", "Tailwind CSS", "SEO Optimization",]
     },
     {
@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
       year: "2025",
       description: "A comprehensive school website that showcases academic programs, facilities, and student achievements. Built with a focus on performance, accessibility, and user-friendly navigation.",
       url: "https://sophia-public-school.vercel.app/",
-      videoSrc: "https://res.cloudinary.com/dg0kso6zc/video/upload/v1744045888/project3_pd7v6y.mp4",
+      videoSrc: "https://res.cloudinary.com/dljiyumfx/video/upload/v1745903908/Untitled_video_-_Made_with_Clipchamp_1_zzwjab.mp4",
       technologies: ["React.js", "Vite", "Tailwind CSS"]
     },
     {
@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
       year: "2025",
       description: "An engaging tourism website offering jungle safari experiences. Features include dynamic booking forms, photo galleries, interactive sections, and mobile-first design.",
       url: "https://evergreen-jungle-safari-website-7pim.vercel.app/",
-      videoSrc: "https://res.cloudinary.com/dg0kso6zc/video/upload/v1744045943/project4_z8sgf5.mp4",
+      videoSrc: "https://res.cloudinary.com/dljiyumfx/video/upload/v1745903863/Untitled_video_-_Made_with_Clipchamp_3_vjzysw.mp4",
       technologies: ["Next.js", "React.js", "Tailwind CSS"]
     }
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import image1 from "@/public/exp1.png";
-import image2 from "@/public/exp2.png";
+// import image2 from "@/public/exp2.png";
 
 const experiences = [
     {

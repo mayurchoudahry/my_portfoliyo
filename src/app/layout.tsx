@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vipul | Software Engineer & Web Developer",
+  title: "MAYUR | Software Engineer & Web Developer",
   description: "Portfolio of Vipul, a software engineer specialized in building scalable applications and user-centric products with expertise in modern web technologies.",
   keywords: ["software engineer", "web developer", "full-stack developer", "React", "Next.js", "portfolio"],
-  authors: [{ name: "Vipul" }],
-  creator: "Vipul",
-  publisher: "Vipul",
+  authors: [{ name: "Mayur" }],
+  creator: "Mayur",
+  publisher: "Mayur",
   formatDetection: {
     email: false,
     telephone: false,
@@ -33,22 +33,22 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Vipul | Software Engineer & Web Developer",
-    description: "Portfolio of Vipul, a software engineer specialized in building scalable applications and user-centric products.",
+    title: "Mayur | Software Engineer & Web Developer",
+    description: "Portfolio of Mayur, a software engineer specialized in building scalable applications and user-centric products.",
     url: "https://my-portfolio-versus-projects.vercel.app/", // Replace with your actual URL
-    siteName: "Vipul's Portfolio",
+    siteName: "Mayur's Portfolio",
     images: [
       {
         url: "/avatar.png", // Add an actual image path for social sharing
         width: 1200,
         height: 630,
-        alt: "Vipul - Software Engineer Portfolio",
+        alt: "Mayur - Software Engineer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vipul | Software Engineer & Web Developer",
+    title: "Mayur | Software Engineer & Web Developer",
     description: "Portfolio of Vipul, a software engineer specialized in building scalable applications and user-centric products.",
     images: ["/avatar.png"], // Add an actual image path for Twitter
   },

@@ -22,7 +22,7 @@ export default function Home() {
               className="object-cover rounded-xl z-0"
             />
             <ASCIIText
-              text='VERSUS'
+              text='MAYUR'
               enableWaves={true}
               asciiFontSize={4}
             />
@@ -32,7 +32,7 @@ export default function Home() {
               <div className="items-center rounded-full overflow-hidden border-4 ml-5 border-white dark:border-black z-10 w-[168px] h-[168px]">
                 <Image
                   src="/avatar.png"
-                  alt="Vipul"
+                  alt="Mayur"
                   width={168}
                   height={168}
                   className="object-cover w-full h-full "
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
 
             <div className="mt-2 sm:mt-0">
-              <AnimatedVariableText text="Hi, I'm Vipul!" className="text-4xl font-bold sm:font-normal sm:text-5xl text-left" />
+              <AnimatedVariableText text="Hi, I'm Mayur!" className="text-4xl font-bold sm:font-normal sm:text-5xl text-left" />
               <AnimatedVariableText text="Nice to meet you" className="text-4xl font-bold sm:font-normal sm:text-5xl text-left -mt-3" />
             </div>
           </div>
@@ -71,9 +71,9 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-bold text-md sm:text-lg">Parul University</h3>
-              <p className="text-neutral-600 dark:text-neutral-400">BTech in Computer Engineering</p>
-              <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">2021 - 2025</p>
+              <h3 className="font-bold text-md sm:text-lg">Mohan lal Sukhadiya University</h3>
+              <p className="text-neutral-600 dark:text-neutral-400">Mca</p>
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">2020 - 2023</p>
             </div>
           </div>
         </section>

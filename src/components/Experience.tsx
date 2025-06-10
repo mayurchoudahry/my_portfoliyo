@@ -9,9 +9,9 @@ import image2 from "@/public/exp2.png";
 const experiences = [
     {
       id: 1,
-      title: "Mannan Solutions",
-      role: "Web Developer Intern",
-      duration: "Dec 2024 - March 2025",
+      title: "TATHASTU MEDIA",
+      role: "Web Developer Intern & CONTENT ",
+      duration: "JAN 2025 - JUNE 2025",
       image: image1,
       description: (
         <ul className="list-disc pl-5 space-y-1">
@@ -22,21 +22,21 @@ const experiences = [
         </ul>
       ),
     },
-    {
-      id: 2,
-      title: "Social Media Coordinator - Parul University",
-      role: "Instagram Page Manager & Designer",
-      duration: "Dec 2022 - Present",
-      image: image2,
-      description: (
-        <ul className="list-disc pl-5 space-y-1">
-          <li>Managed and created engaging content for social media platforms like Facebook and Instagram.</li>
-          <li>Designed creative visuals using Adobe Photoshop, Canva, and Figma.</li>
-          <li>Monitored social media performance and provided analytical reports.</li>
-          <li>This role inspired my interest in UI/UX design, which later helped me in designing websites.</li>
-        </ul>
-      ),
-    },
+    // {
+    //   id: 2,
+    //   title: "Social Media Coordinator - Parul University",
+    //   role: "Instagram Page Manager & Designer",
+    //   duration: "Dec 2022 - Present",
+    //   image: image2,
+    //   description: (
+    //     <ul className="list-disc pl-5 space-y-1">
+    //       <li>Managed and created engaging content for social media platforms like Facebook and Instagram.</li>
+    //       <li>Designed creative visuals using Adobe Photoshop, Canva, and Figma.</li>
+    //       <li>Monitored social media performance and provided analytical reports.</li>
+    //       <li>This role inspired my interest in UI/UX design, which later helped me in designing websites.</li>
+    //     </ul>
+    //   ),
+    // },
   ];
   
 

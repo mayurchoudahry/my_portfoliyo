@@ -39,7 +39,7 @@ const socialItems = [
   {
     title: 'GitHub',
     icon: <Github className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    href: 'https://github.com/VipulSoniwork',
+    href: 'https://github.com/mayurchoudahry',
   },
 //   {
 //     title: 'Twitter',
@@ -49,7 +49,7 @@ const socialItems = [
   {
     title: 'LinkedIn',
     icon: <Linkedin className='h-full w-full text-neutral-600 dark:text-neutral-300' />,
-    href: 'https://www.linkedin.com/in/vipul-soni-3a5005223/',
+    href: 'https://www.linkedin.com/in/mayur-choudhary-62b53a261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
 ];
 
